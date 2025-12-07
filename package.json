@@ -4,11 +4,15 @@
   "description": "Bay Area Rent vs. Buy Calculator with Prop 13 modeling",
   "scripts": {
     "build": "tsc",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "test": "jest"
   },
   "devDependencies": {
-    "typescript": "^5.3.0",
-    "@types/chart.js": "^2.9.41"
+    "@types/chart.js": "^2.9.41",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.3.0"
   },
   "license": "MIT"
 }
