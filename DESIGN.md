@@ -106,9 +106,15 @@ Each year:
 
 ### Stack (v1)
 
-- Plain HTML/CSS/JavaScript (no build step)
-- Charting library (Chart.js, or similar lightweight option)
-- Hosted on GitHub Pages
+- TypeScript compiled to JavaScript
+- Chart.js for visualization
+- Hosted on GitHub Pages (deploy compiled `dist/` output)
+
+### Build Process
+
+- `npm run build` - Compile TypeScript to JavaScript
+- `npm run watch` - Watch mode for development
+- Output goes to `dist/` folder, which is served by GitHub Pages
 
 ### URL State
 
@@ -116,18 +122,21 @@ Each year:
 - Enables sharing and bookmarking specific scenarios
 - Example: `?price=1500000&down=20&rate=6.5&rent=4000`
 
-### File Structure (proposed)
+### File Structure
 
 ```
 /
 ├── index.html
 ├── css/
 │   └── styles.css
-├── js/
-│   ├── calculator.js    # Core calculation logic
-│   ├── chart.js         # Visualization
-│   ├── inputs.js        # Input handling & validation
-│   └── url.js           # URL state management
+├── src/
+│   ├── calculator.ts    # Core calculation logic
+│   ├── chart.ts         # Visualization
+│   ├── inputs.ts        # Input handling & validation
+│   └── url.ts           # URL state management
+├── dist/                # Compiled JS output (git-ignored locally, built for deploy)
+├── package.json
+├── tsconfig.json
 └── DESIGN.md
 ```
 
